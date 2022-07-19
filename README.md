@@ -50,7 +50,7 @@ Let's use this conceptual model to create and manage a queue manager.
 
 ## How to define your queue manager as code
 
-We define all our queue managers in a git repository in
+Best practice is to define every queue manager in its own git repository in
 [GitHub](https://github.com/). We'll quickly see the advantages this brings.
 
 1. *Create your queue manager repository*
@@ -106,15 +106,18 @@ We define all our queue managers in a git repository in
 
    Note how simple it is:
 
-   - `Dockerfile`: Defines the queue manager structure; we'll examine in detail later.
+   - `Dockerfile`: Defines the queue manager structure; we'll examine in detail
+     later.
    - `LICENSE`: A permissive MIT licence that allows you to use this example
      freely in your own work.
-   - `README.md`: This tutorial text.
+   - `README.md`: This tutorial text. We use
+     [Markdown](https://www.markdownguide.org/), becuase is simple and easy to
+     use to create well formatted documents.
    - `docs`: Extended documentation for this tutorial.
 
-**ADVANTAGE:** Using markdown, `README.md` files and a `doc` folder to
-describe your queue manager enables other uses can quickly understand your queue
-manager.
+**ADVANTAGE:** Using Markdown, `README.md` and a `doc` folder to describe your
+queue manager enables other uses can quickly understand its structure and
+behaviour.
 
 ---
 
@@ -122,8 +125,15 @@ manager.
 
 To get you up and running quickly with Kubernetes on your local machine, it's a
 good idea to start with [MiniKube](https://minikube.sigs.k8s.io/docs/start/).
-Minikube is a Kubernetes distribution that you can use on a realtively modest laptop to
-try out the ideas in the GitYourMQ tutorials
+Minikube is a Kubernetes distribution that you can use on a realtively modest
+laptop to try out the ideas in the GitYourMQ tutorials.
+
+1. *Install Minikube*
+
+    Follow [instruction step 1](https://minikube.sigs.k8s.io/docs/start/) to
+    install Minkube on MacOS, Linux or Windows.
+
+2. *Start you
 
 ---
 
