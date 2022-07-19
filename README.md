@@ -95,8 +95,10 @@ Best practice is to define every queue manager in its own git repository in
 
    ```
    .
+   ├── config.mqsc
    ├── Dockerfile
    ├── LICENSE
+   ├── qm.ini
    ├── README.md
    └── docs
        └── images
@@ -106,18 +108,20 @@ Best practice is to define every queue manager in its own git repository in
 
    Note how simple it is:
 
-   - `Dockerfile`: Defines the queue manager structure; we'll examine in detail
-     later.
-   - `LICENSE`: A permissive MIT licence that allows you to use this example
-     freely in your own work.
+   - `Dockerfile`: Defines the queue manager binary code using an OCI-compliant
+     container image.
+   - `qm.ini`: defines the queue manager configuration parameters.
+   - `config.mqsc`: defines the queue manager application customizations.
    - `README.md`: This tutorial text. We use
      [Markdown](https://www.markdownguide.org/), becuase is simple and easy to
      use to create well formatted documents.
    - `docs`: Extended documentation for this tutorial.
+   - `LICENSE`: A permissive MIT licence that allows you to use this example
+     freely in your own work.
 
-**ADVANTAGE:** Using Markdown, `README.md` and a `doc` folder to describe your
-queue manager enables other uses can quickly understand its structure and
-behaviour.
+**ADVANTAGE:** Using Markdown based documentation in `README.md` file and `doc`
+folders enables other uses to quickly understand a queue manager. Follow this as
+best practice.
 
 ---
 
@@ -133,7 +137,9 @@ laptop to try out the ideas in the GitYourMQ tutorials.
     Follow [instruction step 1](https://minikube.sigs.k8s.io/docs/start/) to
     install Minkube on MacOS, Linux or Windows.
 
-2. *Start you
+2. *Start your instance of Minikube*
+
+
 
 ---
 
